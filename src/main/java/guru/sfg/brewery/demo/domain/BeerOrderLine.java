@@ -10,7 +10,7 @@ import java.util.UUID;
 @Setter
 @Getter
 @NoArgsConstructor
-public class BeerOrder {
+public class BeerOrderLine {
 
     private UUID id;
 
@@ -20,12 +20,12 @@ public class BeerOrder {
 
     private Timestamp lastModifiedDate;
 
-    private String customerRef;
+    private BeerOrder beerOrder;
 
-    private OrderStatusEnum orderStatus = OrderStatusEnum.NEW;
+    private Beer beer;
 
-    private String orderStatusCallbackUrl;
+    private Integer orderQuantity = 0;
 
-
+    private Integer quantityAllocated = 0;
 
 }
